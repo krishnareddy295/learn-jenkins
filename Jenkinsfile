@@ -3,15 +3,15 @@ pipeline {
 
     environment {
         TEST_URL = "google.com"
-        SERVICE_CREDS = credentials('my-predefined-username-password')
+        SSH = credentials("centos-ssh")
     }
 
     stages {
         stage('Compile') {
             steps {
 
-                sh 'echo TEST_URL'
-                sh 'echo $SERVICE_CREDS'
+               echo TEST_URL
+               echo SSH
             }
         }
 
