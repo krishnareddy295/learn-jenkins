@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    options {
+       ansiColor('xterm')
+    }
 
     environment {
         TEST_URL = "google.com"
@@ -11,7 +14,7 @@ pipeline {
             steps {
 
                echo TEST_URL
-               echo env
+
 
             }
         }
