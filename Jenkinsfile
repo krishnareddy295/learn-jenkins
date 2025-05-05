@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         TEST_URL = "google.com"
-        RDP = credentials("vmuser")
+
     }
 
     stages {
@@ -11,7 +11,8 @@ pipeline {
             steps {
 
                echo TEST_URL
-               echo SSH
+               echo env
+
             }
         }
 
