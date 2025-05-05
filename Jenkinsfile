@@ -9,9 +9,9 @@ pipeline {
     stages {
         stage('Compile') {
             steps {
-                echo 'Compile'
-                echo TEST_URL
-                sh echo $SERVICE_CREDS
+
+                sh 'echo TEST_URL'
+                sh 'echo $SERVICE_CREDS'
             }
         }
 
