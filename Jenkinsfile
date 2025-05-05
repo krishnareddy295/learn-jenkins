@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         TEST_URL = "google.com"
-        CRED = credentials("username-password")
+        CRED = credentials("centos-ssh")
     }
 
     stages {
