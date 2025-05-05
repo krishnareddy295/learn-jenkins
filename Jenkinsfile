@@ -3,6 +3,7 @@ pipeline {
 
     environment {
         TEST_URL = "google.com"
+        CRED = credentials("username-password")
     }
 
     stages {
@@ -10,6 +11,7 @@ pipeline {
             steps {
                 echo 'Compile'
                 echo TEST_URL
+                echo CRED
             }
         }
 
